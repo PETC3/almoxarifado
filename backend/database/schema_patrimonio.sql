@@ -3,22 +3,22 @@
 
 -- cria uma tabela chamada categorias
 CREATE TABLE categorias (
-    id SERIAL PRIMARY KEY, -- cada linha é única
+    id INT AUTO_INCREMENT PRIMARY KEY, -- cada linha é única
     nome VARCHAR(50) NOT NULL
 );
 
 -- tabela com os locais (armário, gaveta etc)
 CREATE TABLE locais (
-    id SERIAL PRIMARY KEY, 
+    id INT AUTO_INCREMENT PRIMARY KEY, 
     nome VARCHAR(50) NOT NULL
 );
 
 -- tabela de itens
 CREATE TABLE itens (
-    id SERIAL PRIMARY KEY,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(50) NOT NULL,
     descricao TEXT,
-    categoria_id INTEGER NOT NULL, -- ligar o item com a categoria
+    categoria_id INT, -- ligar o item com a categoria
     local_id INTEGER NOT NULL, -- ligar o item com o local
 
 -- chaves estrangeiras
